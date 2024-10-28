@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.App{
+    /* background-color: blue; */
+    height: 100svh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.carrusel{
+    /* background-color: brown; */
+    height: 60%;
+    width: 90%;
+    border: 1px solid black;
+}
+.resultados{
+    /* background-color: burlywood; */
+    height: 30%;
+    width: 90%;
+    border: 1px solid black;
+}
+.temporizador{
+    /* background-color: yellow; */
+    width: 100%;
+    height: 10%;
+    border: 1px solid black;
+}
