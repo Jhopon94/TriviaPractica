@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './temporizador.css';
+import { useValor } from '../../valorContexto';
 
 const Temporizador = () => {
+  
+  const {siguientePregunta, setSiguientePregunta, examenTerminado}= useValor();
   const [seconds, setSeconds] = useState(0);
   const [minute, setMinute] = useState(0);
   const [activo, setActivo] = useState(true); // Estado para controlar si el temporizador está activo o en pausa
@@ -28,11 +31,20 @@ const Temporizador = () => {
     return () => clearInterval(intervalo);
   }, [activo, seconds]);
 
-  const handleNextQuestion = () => {
+useEffect(() => {
+  if(siguientePregunta){
     setSeconds(0); // Reinicia los segundos
     setMinute(0);  // Reinicia los minutos
     setActivo(true); // Reactiva el temporizador para la siguiente pregunta
-  };
+  } 
+  setSiguientePregunta(false);
+},[siguientePregunta]);
+
+useEffect(()=> {
+  if(examenTerminado){
+    setActivo(false);
+  }
+},[examenTerminado]);
 
   return (
     <div className='tiempo'>
@@ -41,9 +53,7 @@ const Temporizador = () => {
           <h3>Tiempo</h3>
           <h4>{minute}:{seconds < 10 ? `0${seconds}` : seconds}</h4>
         </div>
-        <div className='botones'>
-          <button onClick={handleNextQuestion}>Siguiente Pregunta</button>
-        </div>
+
       </div>
     </div>
   );
