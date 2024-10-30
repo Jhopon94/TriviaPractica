@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import Tablero from './componentes/tablero/tablero';
 import './App.css';
 import './global.css';
 

@@ -1,0 +1,112 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.tablero {
+  max-width: 1200px;
+  margin: 50px auto;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  text-align: center;
+  color: #333;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.lista-respuestas {
+  list-style-type: none;
+  padding: 0;
+}
+
+.respuesta {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.correcta {
+  border: 2px solid green;
+  background-color: #e0f7e0;
+}
+
+.incorrecta {
+  border: 2px solid red;
+  background-color: #f7e0e0;
+}
+
+.botones {
+  display: flex;
+  gap: 10px;
+}
+
+.correcto {
+  background-color: #4caf50;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.incorrecto {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.correcto:hover {
+  background-color: #45a049;
+}
+
+.incorrecto:hover {
+  background-color: #ff3333;
+}
+
+.resumen {
+  margin-top: 20px;
+  text-align: center;
+  background-color: #e0e0e0;
+  padding: 10px;
+  border-radius: 10px;
+}
