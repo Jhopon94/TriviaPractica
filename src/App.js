@@ -1,3 +1,4 @@
+import Tablero from './componentes/tablero/tablero';
 import Carrusel from './componentes/carrusel/carrusel';
 import './App.css';
 import './global.css';
@@ -15,6 +16,7 @@ function App() {
         <Carrusel />
       </div>
       <div className='resultados'>
+        <Tablero/>
       </div>
     </div>
     </ValorProvider>
